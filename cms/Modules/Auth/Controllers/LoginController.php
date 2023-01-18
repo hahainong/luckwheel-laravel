@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Cms\Modules\Auth\Services\Contracts\AuthUserServiceContract;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -21,5 +22,17 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('Auth::login');
+    }
+
+    public function loginSocialRedirect() 
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function loginSocialCallback()
+    {
+        $user = $this->service->loginSocial();
+
+        if ($user) return redirect()->route('client.user.luckwheel', ['token' => $user['token']]);
     }
 }

@@ -10,8 +10,7 @@ Route::group([
     Route::get('/', 'HomeController@welcome')->name('home.welcome');
 
     Route::group([
-        'middleware' => ['auth', 'cms.verified']
     ], function () {
-        Route::get('/home', 'HomeController@index')->name('home.index');
+        Route::get('', 'HomeController@index')->name('client.home.index');
     });
 });

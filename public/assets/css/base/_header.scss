@@ -1,0 +1,20 @@
+.navbar {
+	background-color: $color-red-fire-engine;
+	.navbar-brand {
+		font-size: 24px;
+		color: $color-yellow-gargoyle-gas;
+		font-weight: bold;
+	}
+	.navbar-nav {
+		.nav-link {
+			color: $color-yellow-gargoyle-gas;
+			font-weight: bold;
+		}
+	}
+	.container {
+		padding: 0 20px;
+		.dropdown-menu {
+			background-color: #fee6ab;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+/*
+    footer
+*/
+footer {
+   .inner {
+       margin-bottom: 67px;
+       @include pc {
+           margin-bottom: get_pc(67);
+       }
+       .rules_privacy {
+           margin-bottom: 224px;
+           @include pc {
+               margin-bottom: get_pc(224);
+           }
+           @include sp {
+               margin-bottom: get_sp(60);
+           }
+            .item_ {
+                display: flex;
+                width: 689px;
+                height: 90px;
+                margin: 0 auto 55px;
+                align-items: center;
+                border: 1px solid #153765;
+                border-radius: 10px;
+                @include pc {
+                    width: get_pc(689);
+                    height: get_pc(90);
+                    margin: 0 auto get_pc(55);
+                    border: get_pc(1) solid #153765;
+                    border-radius: get_pc(10);
+                }
+                @include sp {
+                    position: relative;
+                    border-radius: get_sp(27);
+                    width: get_sp(300);
+                    height: get_sp(50);
+                    margin: 0 auto get_sp(30);
+                }
+                a {
+                    font-size: 28px;
+                    line-height: 33.89px;
+                    font-weight: 600;
+                    color: $clr-black;
+                    @include pc {
+                        font-size: get_pc(28);
+                        line-height: get_pc(33.89);
+                    }
+                    @include sp {
+                        font-size: get_sp(16);
+                        line-height: get_sp(19.36);
+                    }
+                }
+                .rules_text {
+                    margin-left: 208px;
+                    @include pc {
+                        margin-left: get_pc(208);
+                    }
+                    @include sp {
+                        margin-left: get_sp(68);
+                    }
+                }
+                .privacy_text {
+                    margin-left: 175px;
+                    @include pc {
+                        margin-left: get_pc(175);
+                    }
+                    @include sp {
+                        margin-left: get_sp(68);
+                    }
+                }
+                .arrow {
+                    padding: 35.5px 27px;
+                        border-right: 1px solid #153765;
+                        border-radius: 10px;
+                        background-color: $clr-main-bg;
+                        @include pc {
+                            padding: get_pc(35.5) get_pc(27);
+                            border-right: get_pc(1) solid #153765;
+                            border-radius: get_pc(10);
+                        }
+                        @include sp {
+                            position: absolute;
+                            right: 0;
+                            border: get_pc(1) solid #153765;
+                            border-radius: get_sp(27);
+                            border-right: none;
+                            padding: get_sp(21) get_sp(15);
+                    }
+                    .thumb {
+                        width: 45px;
+                        height: 15px;
+                        display: flex;
+                        @include pc {
+                            width: get_pc(45);
+                            height: get_pc(15);
+                        }
+                        @include sp {
+                            width: get_sp(20);
+                            //height: get_sp(5);
+                            height: auto;
+                        }
+                    }
+                }
+            }
+       }
+       .thumb.util_sp {
+           @include sp {
+               width: get_sp(110);
+               margin: 0 auto get_sp(29);
+           }
+       }
+       .copyright {
+           .thumb {
+               margin: 0 auto 15px;
+               width: 76.81px;
+               height: 50px;
+               @include pc {
+                   margin: 0 auto get_pc(15);
+                   width: get_pc(76.81);
+                   height: get_pc(50);
+               }
+               @include sp {
+                   margin: 0 auto get_sp(15);
+                   width: get_sp(61.44);
+                   height: get_sp(40);
+               }
+           }
+           h3 {
+               font-size: 19px;
+               line-height: 22.99px;
+               margin-bottom: 45px;
+               @include pc {
+                   font-size: get_pc(19);
+                   line-height: get_pc(22.99);
+                   margin-bottom: get_pc(45);
+               }
+               @include sp {
+                   font-size: get_sp(12);
+                   line-height: get_sp(14.52);
+                   margin-bottom: get_sp(29);
+                   padding: 0 get_sp(51);
+               }
+               span {
+                   display: block;
+                   @include sp {
+                       display: inline-block;
+                   }
+               }
+           }
+           span {
+               font-size: 19px;
+               line-height: 22.99px;
+               color: #555555;
+               @include pc {
+                   font-size: get_pc(19);
+                   line-height: get_pc(22.99);
+               }
+               @include sp {
+                   font-size: get_sp(10);
+                   line-height: get_sp(12.1);
+               }
+           }
+       }
+   }
+}
+.slick-dots li {
+    background-color: #EAF3FA !important;
+}

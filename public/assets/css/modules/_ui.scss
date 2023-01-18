@@ -1,0 +1,14 @@
+.tlt_ {
+    color: $clr-main-text;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 66.56px;
+    @include pc {
+        font-size: get_pc(55);
+        line-height: get_pc(66.56);
+    }
+    @include sp {
+        font-size: get_sp(22);
+        line-height: get_sp(26.63);
+    }
+}

@@ -4,6 +4,9 @@ namespace Cms;
 
 use Cms\Modules\Auth\AuthServiceProvider;
 use Cms\Modules\Core\CoreServiceProvider;
+use Cms\Modules\Home\HomeServiceProvider;
+use Cms\Modules\Reward\RewardServiceProvider;
+use Cms\Modules\User\UserServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Routing\Router;
@@ -112,5 +115,8 @@ class CmsServiceProvider extends ServiceProvider
     {
          $this->app->register(CoreServiceProvider::class);
          $this->app->register(AuthServiceProvider::class);
+         $this->app->register(HomeServiceProvider::class);
+         $this->app->register(UserServiceProvider::class);
+         $this->app->register(RewardServiceProvider::class);
     }
 }

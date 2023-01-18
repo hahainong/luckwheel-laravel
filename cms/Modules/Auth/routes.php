@@ -11,6 +11,8 @@ Route::group([
     ], function () {
         Route::get('/login', 'LoginController@showLoginForm')->name('login');
         Route::post('login', 'LoginController@login');
+        Route::get('/login/facebook', 'LoginController@loginSocialRedirect')->name('client.login.social.redirect');
+        Route::get('/facebook/callback', 'LoginController@loginSocialCallback')->name('client.login.social.callback');
 
         Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
         Route::post('register', 'RegisterController@register');

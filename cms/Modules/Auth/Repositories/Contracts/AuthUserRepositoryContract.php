@@ -7,5 +7,5 @@ use Cms\Modules\Core\Repositories\Contracts\CoreUserRepositoryContract;
 
 interface AuthUserRepositoryContract extends CoreUserRepositoryContract
 {
-
+    public function findSocialId($id);
 }

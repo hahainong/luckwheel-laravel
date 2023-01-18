@@ -6,7 +6,7 @@ networks:
 services:
   nginx:
     image: nginx:stable-alpine
-    container_name: nginx_laravel_base
+    container_name: luckwheel_nginx
     ports:
       - "8000:80"
     volumes:
@@ -19,7 +19,7 @@ services:
       - my_network
   mariadb:
     image: mariadb:10.6.4
-    container_name: mariadb_laravel_base
+    container_name: luckwheel_mariadb
     restart: unless-stopped
     tty: true
     ports:
@@ -27,7 +27,7 @@ services:
     volumes:
       - ./docker/mariadb/my.cnf:/etc/mysql/my.cnf
     environment:
-      MYSQL_DATABASE: laravel_base
+      MYSQL_DATABASE: luckwheel
       MYSQL_USER: caerux
       MYSQL_PASSWORD: .caerux
       MYSQL_ROOT_PASSWORD: .caerux
@@ -38,7 +38,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile
-    container_name: php_laravel_base
+    container_name: luckwheel_php
     volumes:
       - ./:/var/www/html
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini

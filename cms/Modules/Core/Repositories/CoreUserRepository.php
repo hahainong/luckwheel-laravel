@@ -19,4 +19,14 @@ class CoreUserRepository implements CoreUserRepositoryContract
     {
         return $this->model->create($data);
     }
+
+    public function find($id)
+    {
+        return $this->model->find($id);
+    }
+
+    public function findByToken($token)
+    {
+        return $this->model->where('token', $token)->first();
+    }
 }

@@ -184,6 +184,22 @@ return [
          * Spatie Laravel Permission Service Providers...
          */
         Spatie\Permission\PermissionServiceProvider::class,
+
+        /*
+         * Socialite 
+         */
+
+         Laravel\Socialite\SocialiteServiceProvider::class,
+
+        /*
+         * QR Code
+         */
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+
+        /*
+         * Mobile Detect
+         */
+        Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class
     ],
 
     /*
@@ -238,7 +254,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'MobileDetect' => Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class
     ],
 
 ];

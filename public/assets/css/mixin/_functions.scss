@@ -1,0 +1,72 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+@mixin formclear {
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+@mixin bgsetup($bgimage: '', $bgrepeat: '', $bgposi: '', $bgsize: '') {
+    @if $bgimage != '' {
+        background-image: url($bgimage);
+    }
+    @if $bgrepeat != '' {
+        background-repeat: $bgrepeat;
+    }
+    @if $bgposi != '' {
+        background-position: $bgposi;
+    }
+    @if $bgsize != '' {
+        background-size: $bgsize;
+    }
+}
+@mixin pc { //pc
+    @media only screen and (max-width: ($breakpoint-lagre)) and (min-width: ($breakpoint-pc)) {
+        @content;
+    }
+}
+@function get_pc($fsize, $viewport:1920) {
+    $rate: 100 / $viewport;
+    @return $rate * $fsize * 1vw;
+}
+@mixin sp { //sp
+    @media (max-width: ($breakpoint-md)) {
+        @content;
+    }
+}
+/* automatic size vw */
+@function get_sp($fsize, $viewport:390) {
+    $rate: 100 / $viewport;
+    @return $rate * $fsize * 1vw;
+}
+
+/* text clamp */
+@mixin txtClamp($clamp: '', $line: '', $fontsize: '') {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+    height: $fontsize * $clamp * $line;
+    @if $line != '' {
+        line-height: $line;
+    }
+}
+
+/* anime In order */
+@mixin animeInorder($limit, $sec, $ease-cubic, $delay) {
+    @for$i from 1 through $limit {
+        &:nth-child(#{$i}) {
+            -webkit-animation: slideIn $sec $ease-cubic #{$delay+$i*0.1} forwards;
+                    animation: slideIn $sec $ease-cubic #{$delay+$i*0.1} forwards;
+        }
+    }
+}
