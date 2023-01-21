@@ -23,17 +23,17 @@
         var prizes = [{
                 text: "500k",
                 number: 999,
-                percentpage: 0.01 // 1%
+                percentpage: 0.001 // 0.1%
             },
             {
                 text: "200k",
                 number: 999,
-                percentpage: 0.1 // 10%
+                percentpage: 0.05 // 5%
             },
             {
                 text: "100k",
                 number: 999,
-                percentpage: 0.15 // 15%
+                percentpage: 0.1 // 10%
             },
             {
                 text: "50k",
