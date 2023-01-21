@@ -40,6 +40,7 @@ class RegisterController extends Controller
     public function register(UserCreateRequest $request)
     {
         $user = $this->user->store($request->all());
+        $user->token = generate_random_string(10);
         event(new Registered($user));
         $this->guard()->login($user);
 
