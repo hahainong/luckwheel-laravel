@@ -441,10 +441,18 @@ body {
     transition-delay: 0s, 3s;
   }
 }
-.profile .container {
+.profile .content .container {
   margin-top: 100px;
 }
-.profile .container .row .col-lg-4 {
+@media (max-width: 991.5px) {
+  .profile .content .container {
+    margin-top: 20px;
+  }
+  .profile .content .container .row .col-lg-4 {
+    margin: 20px 0px;
+  }
+}
+.profile .content .container .row .col-lg-4 {
   display: flex;
   justify-content: center;
 }
@@ -538,14 +546,6 @@ body {
 }
 .profile .card .card-content .social-icons li a span {
   font-size: 1.3rem;
-}
-@media (max-width: 991.5px) {
-  .profile .container {
-    margin-top: 20px;
-  }
-  .profile .container .row .col-lg-4 {
-    margin: 20px 0px;
-  }
 }
 
 .qr {
