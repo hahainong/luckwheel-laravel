@@ -25,7 +25,7 @@ class RegisterController extends Controller
 
     protected $user;
 
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     public function __construct(AuthUserServiceContract $user)
     {
