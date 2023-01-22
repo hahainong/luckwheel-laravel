@@ -16,7 +16,8 @@ class CoreUserService
 
     public function store($data)
     {
-        $data['password'] = Hash::make($data['password']);
+	$data['password'] = Hash::make($data['password']);
+	$data['token'] = generate_random_string(10);
 
         return $this->user->store($data);
     }
