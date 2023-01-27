@@ -23,12 +23,12 @@
         var prizes = [{
                 text: "500k",
                 number: 999,
-                percentpage: 0.001 // 0.1%
+                percentpage: 0.00001 // 0.1%
             },
             {
                 text: "200k",
                 number: 999,
-                percentpage: 0.05 // 5%
+                percentpage: 0.01 // 1%
             },
             {
                 text: "100k",
@@ -43,12 +43,12 @@
             {
                 text: "20k",
                 number: 999,
-                percentpage: 0.2 // 20%
+                percentpage: 0.3 // 40%
             },
             {
                 text: "10k",
                 number: 999,
-                percentpage: 0.3 // 30%
+                percentpage: 0.4 // 50%
             },
         ];
         document.addEventListener(

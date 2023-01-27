@@ -37,7 +37,8 @@
                         </div>
                         <!-- Team Details-->
                         <div class="single_advisor_details_info">
-                            <h6>{{ $value['receiver_name'] }}</h6>
+			    <h6>{{ $value['receiver_name'] }}</h6>
+			    <p class="designation">So tien: {{ $value['reward'] }}</p>
                             <p class="designation">STK: {{ $value['bank_number'] }}</p>
                             <p class="designation">Ngân Hàng: {{ $value['bank_name'] }}</p>
                         </div>
